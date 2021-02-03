@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Contacto</title>
+    <!--estilos-->
+    <!--Materialize-->
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!--js-->
+    <!--jquery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+
+    <!-- Materialize Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!--estilos propios-->
+    <style>
+        .container {
+            width: 50%;
+            border: 2px solid black;
+            padding: 40px;
+            margin-top: 100px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <form action="/results" method="POST" class="col s12">
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input id="last_name" type="text" class="validate" name="name">
+                        <label for="last_name">Name</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <select name="location">                        
+                        <option value="Mountain View">Mountain View</option>
+                        <option value="New York">New York</option>
+                        <option value="Japan">Japan</option>
+                        </select>
+                        <label>Dojo Location</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <select name="favleng">                        
+                        <option value="Javascript">Javascript</option>
+                        <option value="Python">Python</option>
+                        <option value="C++">C++</option>
+                        </select>
+                        <label>Favorite Languaje</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <textarea id="textarea1" class="materialize-textarea" name="comment"></textarea>
+                        <label for="textarea1">Comment (optional)</label>
+                    </div>
+                </div>
+                <input type="submit" value="Submit">
+            </form>
+
+        </div>
+    </div>
+
+
+    <script>
+        $(document).ready(function() {
+            $('select').formSelect();
+        });
+    </script>
+</body>
+
+</html>
